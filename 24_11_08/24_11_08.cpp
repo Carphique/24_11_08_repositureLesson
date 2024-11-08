@@ -41,6 +41,19 @@ public:
 		this->age = age;
 	}
 };
+class Group {
+	Student* students;
+	int amountOfStudents;
+public:
+	Group() {
+		amountOfStudents = 1;
+		students = new Student[amountOfStudents];
+	}
+	~Group() {
+		delete[] students;
+		students = nullptr;
+	}
+};
 int main() {
 	Student obj;
 	obj.PrintInfoAboutStudent();
